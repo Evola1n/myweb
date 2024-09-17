@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Реєстрація</title>
+</head>
+<body>
+    <header>
+    </header>
+    <nav>
+    <ul>
+        <li><a href="/labs.html">Лабораторні завдання</a></li>
+    </ul>
+    </nav>
+
+    <h1>Реєстрація користувача</h1>
+    <form action="https://webhook.site/adfd680b-45ae-4bb1-8e73-ad8378d33cf7" method="POST">
+        <label for="first-name">Ім'я: </label>
+        <input type="text" id="first-name" name="first-name" required pattern="[A-Za-zА-Яа-яЁёІіЇїЄє']+" title="Введіть коректне ім'я"><br>
+
+        <label for="last-name">Прізвище: </label>
+        <input type="text" id="last-name" name="last-name" required pattern="[A-Za-zА-Яа-яЁёІіЇїЄє']+" title="Введіть коректне прізвище"><br>
+
+        <label for="email">Електронна пошта: </label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="password">Пароль: </label>
+        <input type="password" id="password" name="password" required ><br>
+
+        <label for="confirm-password">Підтвердіть пароль: </label>
+        <input type="password" id="confirm-password" name="confirm-password" required><br>
+
+        <label for="dob">Дата народження: </label>
+        <input type="date" id="dob" name="dob"><br>
+
+        <label for="gender">Стать: </label>
+        <select id="gender" name="gender">
+            <option value="male">Чоловіча</option>
+            <option value="female">Жіноча</option>
+            <option value="other">Інше</option>
+        </select><br>
+
+        <input type="submit" value="Зареєструватися">
+    </form>
+</body>
+</html>

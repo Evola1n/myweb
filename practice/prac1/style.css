@@ -1,0 +1,97 @@
+body {
+    font-family: 'Exo 2', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #ffffff;
+    transition: background-color 0.5s ease;
+}
+
+header {
+    background-color: #eb7a34;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 2s;
+}
+
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    background-color: #eb7a34;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+    text-shadow: 0 0 10px #fff;
+}
+
+nav ul li::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0;
+    background: #ddd;
+    transition: width 0.4s ease;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+th, td {
+    border: 1px solid #b7b4b4;
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background-color: #000000;
+    font-weight: bold;
+}
+td {
+    height: 100px;
+    vertical-align: top;
+}
+.day {
+    background-color: #3c3c3d;
+    border: 1px solid #6ea8fe;
+    margin: 5px 0;
+    padding: 5px;
+    font-size: 14px;
+}
+.subject {
+    background-color: #000000;
+    border-left: 5px solid #3b8df7;
+    margin: 10px 0;
+    padding: 5px;
+}
+.time {
+    font-weight: bold;
+    color: #333;
+}
