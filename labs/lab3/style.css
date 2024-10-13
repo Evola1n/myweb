@@ -1,0 +1,380 @@
+/* Загальні стилі */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Стилі для шапки */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    width: 24px;
+    margin-right: 20px;
+}
+
+.logo {
+    height: 60px;
+}
+
+.header-center {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.search-input {
+    width: 600px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 2px 0 0 2px;
+}
+
+.search-button {
+    padding: 8px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 0 2px 2px 0;
+    cursor: pointer;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    background: none;
+    border: none;
+    font-size: 24px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/* Контейнер для сайдбару та головного контенту */
+.container {
+    display: flex;
+    margin-top: 20px;
+}
+
+/* Основний стиль для сайдбару */
+.sidebar {
+    width: 220px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Стилі для списку */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Іконки для меню */
+.menu-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    transition: transform 0.3s ease;
+}
+
+/* Зміна фону та ефект при наведенні */
+.sidebar li:hover {
+    background-color: #e0e0e0;
+}
+
+/* Ефект при наведенні на іконки */
+.sidebar li:hover .menu-icon {
+    transform: scale(1.1);
+}
+
+/* Стиль для активної сторінки (наприклад, головної) */
+.sidebar li.active {
+    background-color: #d0d0d0;
+    font-weight: bold;
+}
+
+
+/* Головний контент */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #fff;
+}
+
+/* Відео-сітка */
+/* Стиль для секції відео */
+/* Стиль для секції відео */
+.video-grid {
+    display: grid; /* Використання CSS Grid для розташування відео */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Гнучка сітка */
+    gap: 20px; /* Відстань між картками */
+    padding: 20px; /* Внутрішні відступи */
+}
+
+/* Стиль для картки відео */
+.video-card {
+    background-color: #ffffff; /* Білий фон */
+    border-radius: 10px; /* Округлені кути */
+    overflow: hidden; /* Приховування переповненого контенту */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тінь */
+}
+
+/* Стиль для мініатюри відео */
+.video-thumbnail {
+    width: 100%; /* Ширина 100% */
+    height: auto; /* Автоматична висота */
+}
+
+/* Стиль для інформації про відео */
+.video-info {
+    display: flex; /* Дисплей як флекс-контейнер */
+    align-items: center; /* Центрування по вертикалі */
+    padding: 10px; /* Внутрішні відступи */
+}
+
+/* Стиль для логотипу каналу */
+.avatar {
+    width: 40px; /* Ширина логотипу */
+    height: 40px; /* Висота логотипу */
+    border-radius: 50%; /* Круглі логотипи */
+    margin-right: 10px; /* Відстань до назви каналу */
+}
+
+/* Стиль для деталей відео */
+.video-details {
+    flex-grow: 1; /* Займає всю доступну ширину */
+}
+
+/* Стиль для заголовка відео */
+.video-title {
+    font-size: 16px; /* Розмір шрифту заголовка */
+    margin: 5px 0; /* Відстань зверху і знизу */
+}
+
+/* Стиль для назви каналу */
+.channel-name {
+    font-weight: bold; /* Жирний шрифт */
+}
+
+/* Стиль для статистики відео */
+.video-stats {
+    font-size: 14px; /* Розмір шрифту */
+    color: #606060; /* Колір тексту */
+}
+
+
+/* Стиль для інформації про канал */
+.channel-info {
+    display: flex; /* Дисплей як флекс-контейнер */
+    align-items: center; /* Центрування по вертикалі */
+    margin-bottom: 5px; /* Відстань до кількості переглядів */
+}
+
+/* Стиль для логотипу каналу */
+.channel-logo {
+    width: 30px; /* Ширина логотипу */
+    height: 30px; /* Висота логотипу */
+    border-radius: 50%; /* Круглі логотипи */
+    margin-right: 10px; /* Відстань до назви каналу */
+}
+
+/* Стиль для назви каналу */
+.channel-name {
+    font-weight: bold; /* Жирний шрифт */
+}
+
+/* Стиль для кількості переглядів */
+.video-views {
+    font-size: 14px; /* Розмір шрифту */
+    color: #606060; /* Колір тексту */
+}
+
+
+/* Основний стиль для кнопки */
+/* Стиль для правої частини хедера */
+/* Стиль для правої частини хедера */
+/* Стиль для правої частини хедера */
+/* Стиль для правої частини хедера */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Відстань між кнопками */
+}
+
+/* Стиль для іконок-кнопок */
+.icon {
+    background-color: transparent; /* Прозорий фон */
+    border: none; /* Без рамки */
+    cursor: pointer; /* Курсор у вигляді руки */
+    padding: 10px; /* Внутрішні відступи */
+    width: 50px; /* Ширина кнопки */
+    height: 50px; /* Висота кнопки */
+    border-radius: 50%; /* Круглі кнопки */
+    display: flex; /* Дисплей як флекс-контейнер */
+    justify-content: center; /* Центрування по горизонталі */
+    align-items: center; /* Центрування по вертикалі */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Плавний перехід */
+}
+
+/* Стиль для SVG іконок */
+.icon svg {
+    width: 32px; /* Збільшено розмір іконки */
+    height: 32px; /* Збільшено розмір іконки */
+    fill: #606060; /* Колір іконки */
+}
+
+/* Ефект при наведенні на іконки */
+.icon:hover {
+    background-color: #e0e0e0; /* Фон при наведенні */
+    transform: scale(1.1); /* Масштабування */
+}
+
+/* Стиль для профільної іконки */
+.profile-button {
+    background-color: transparent; /* Прозорий фон */
+    border: none; /* Без рамки */
+    cursor: pointer; /* Курсор у вигляді руки */
+    padding: 0; /* Без внутрішніх відступів */
+}
+
+/* Стиль для зображення профілю */
+.profile-icon {
+    width: 40px; /* Збільшено ширину зображення */
+    height: 40px; /* Збільшено висоту зображення */
+    border-radius: 50%; /* Округлі кути */
+    transition: transform 0.3s ease; /* Плавний перехід */
+}
+
+/* Ефект при наведенні на профільну іконку */
+.profile-button:hover .profile-icon {
+    transform: scale(1.1); /* Масштабування при наведенні */
+}
+
+
+
+/* Стиль для панелі пошуку */
+.search-bar {
+    display: flex; /* Дисплей як флекс-контейнер */
+    align-items: center; /* Центрування по вертикалі */
+    background-color: #f1f1f1; /* Світлий фон */
+    border-radius: 25px; /* Округлені кути */
+    padding: 5px; /* Внутрішні відступи */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тінь */
+    width: 800px; /* Ширина панелі пошуку */
+}
+
+/* Стиль для поля введення */
+.search-input {
+    border: none; /* Без рамки */
+    background-color: transparent; /* Прозорий фон */
+    outline: none; /* Без контурів */
+    padding: 10px; /* Внутрішні відступи */
+    font-size: 16px; /* Розмір шрифту */
+    flex: 1; /* Займає всю доступну ширину */
+}
+
+/* Стиль для кнопки пошуку */
+.search-button {
+    background-color: #ff0000; /* Червоний фон */
+    border: none; /* Без рамки */
+    border-radius: 50%; /* Круглі кнопки */
+    cursor: pointer; /* Курсор у вигляді руки */
+    padding: 8px; /* Внутрішні відступи */
+    margin-left: 5px; /* Відстань до поля введення */
+    transition: background-color 0.3s ease; /* Плавний перехід для фону */
+}
+
+/* Ефект при наведенні на кнопку пошуку */
+.search-button:hover {
+    background-color: #d60000; /* Темніший червоний фон при наведенні */
+}
+
+/* Стиль для іконки в кнопці */
+.search-button svg {
+    width: 20px; /* Ширина іконки */
+    height: 20px; /* Висота іконки */
+}
+
+/* Стиль для розділу підписок */
+.subscriptions {
+    padding: 20px; /* Внутрішні відступи */
+    background-color: #ffffff; /* Білий фон */
+    border-radius: 10px; /* Округлені кути */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тінь */
+}
+
+/* Стиль для заголовка розділу */
+.subscriptions h2 {
+    font-size: 24px; /* Розмір шрифту заголовка */
+    margin-bottom: 15px; /* Відстань до списку */
+}
+
+/* Стиль для списку підписок */
+.subscription-list {
+    list-style-type: none; /* Без маркерів списку */
+    padding: 0; /* Без внутрішніх відступів */
+}
+
+/* Стиль для елемента списку підписок */
+.subscription-item {
+    display: flex; /* Дисплей як флекс-контейнер */
+    align-items: center; /* Центрування по вертикалі */
+    margin-bottom: 10px; /* Відстань між елементами */
+}
+
+/* Стиль для логотипу каналу */
+.channel-logo {
+    width: 50px; /* Ширина логотипу */
+    height: 50px; /* Висота логотипу */
+    border-radius: 50%; /* Круглі логотипи */
+    margin-right: 15px; /* Відстань до назви каналу */
+}
+
+/* Стиль для інформації про канал */
+.channel-info {
+    display: flex; /* Дисплей як флекс-контейнер */
+    flex-direction: column; /* Розташування елементів вертикально */
+}
+
+/* Стиль для назви каналу */
+.channel-name {
+    font-weight: bold; /* Жирний шрифт */
+}
+
+/* Стиль для кількості підписників */
+.channel-subscriber-count {
+    font-size: 14px; /* Розмір шрифту */
+    color: #606060; /* Колір тексту */
+}

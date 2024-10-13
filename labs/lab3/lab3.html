@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <img src="logo_youtube.png" alt="YouTube Logo" class="logo">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search" class="search-input">
+            <button class="search-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#FFFFFF">
+                    <path d="M21 20l-5.6-5.6a7.9 7.9 0 0 0 1.4-4.4C16.8 7.2 14.2 4.8 10.6 4.8A6.8 6.8 0 0 0 3.8 11c0 3.6 3.4 6.5 7.6 6.5 1.6 0 3.1-.5 4.4-1.4L20 21l1-1zm-10.4-3.2c-4 0-7.2-3.2-7.2-7.2s3.2-7.2 7.2-7.2 7.2 3.2 7.2 7.2-3.2 7.2-7.2 7.2z"/>
+                </svg>
+            </button>
+        </div>
+        
+        
+        </div>
+        <div class="header-right">
+            <button class="icon">
+                <!-- Іконка "Камера" замінена на іншу -->
+                <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#000">
+                    <path d="M21 5h-2.17l-1.84-2H7.01L5.17 5H3c-1.11 0-2 .89-2 2v10c0 1.11.89 2 2 2h18c1.1 0 2-.89 2-2V7c0-1.11-.9-2-2-2zm0 12H3V7h2.5l1.83-2h8.34l1.83 2H21v10zM12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
+                </svg>
+            </button>
+            <button class="icon">
+                <!-- Іконка "Дзвінок" замінена на іншу -->
+                <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#000">
+                    <path d="M10 21c0 1.1.9 2 2 2s2-.9 2-2h-4zm8-5v-5c0-2.76-1.69-5.1-4.07-6.08C13.47 4.35 13 3.74 13 3c0-.83-.67-1.5-1.5-1.5S10 2.17 10 3c0 .74-.47 1.35-1.07 1.92C6.69 5.9 5 8.24 5 11v5l-2 2v1h18v-1l-2-2zm-2 .17L8 16v-5c0-2.21 1.79-4 4-4s4 1.79 4 4v5l-2 .17z"/>
+                </svg>
+            </button>
+            <button class="profile-button">
+                <!-- Профільна іконка -->
+                <img src="channels4_profile.jpg" alt="Profile Icon" class="profile-icon">
+            </button>
+        </div>
+        
+        
+            
+
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <ul>
+                <li>
+                    <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#FF0000">
+                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                    </svg>
+                    Home
+                </li>
+                <li>
+                    <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#FF0000">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-2.95-.49-5.22-2.76-5.71-5.71H11v5.71zm6.71-3.47c-.39-.63-1.13-1.01-1.9-.84-.77.16-1.39.79-1.55 1.56-.16.77.21 1.5.83 1.88C14.22 20.1 13.13 20.5 12 20.5c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5c0 1.13-.4 2.22-1.07 3.07z"/>
+                    </svg>
+                    Trending
+                </li>
+                <li>
+                    <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#FF0000">
+                        <path d="M20 18H4v-2h16v2zM4 6v10h5V6H4zm7 0v10h9V6h-9zm2 4h5v2h-5v-2z"/>
+                    </svg>
+                    Library
+                </li>
+                <li>
+                    <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#FF0000">
+                        <path d="M13 3c-4.97 0-9 4.03-9 9s4.03 9 9 9c1.48 0 2.87-.38 4.11-1.03l2.53 2.53 1.41-1.41-2.53-2.53C19.62 14.87 20 13.48 20 12c0-4.97-4.03-9-9-9zm0 16c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zm-1-12h2v6h-2zm0 8h2v2h-2z"/>
+                    </svg>
+                    History
+                </li>
+                <li>
+                    <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#FF0000">
+                        <path d="M12 2C6.48 2 2 6.48 2 12c0 5.52 4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM12 7v5l4.25 2.52.75-1.23-3.5-2.08V7h-1.5z"/>
+                    </svg>
+                    Watch Later
+                </li>
+            </ul>
+        </aside>
+        
+        
+
+        <main class="main-content">
+            <section class="video-grid">
+                <div class="video-card">
+                    <img src="avice_video.jpg" alt="Video Thumbnail" class="video-thumbnail">
+                    <div class="video-info">
+                        <img src="channels4_profile (1).jpg" alt="Channel Avatar" class="avatar">
+                        <div class="video-details">
+                            <h4 class="video-title">Потная игра на морфе</h4>
+                            <p class="channel-name">Avice</p>
+                            <p class="video-stats">123K views • 2 days ago</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="video-card">
+                    <img src="mqdefault_6s.webp" alt="Video Thumbnail" class="video-thumbnail">
+                    <div class="video-info">
+                        <img src="channels4_profile (2).jpg" alt="Channel Avatar" class="avatar">
+                        <div class="video-details">
+                            <h4 class="video-title">100 Identical Twins Fight For $250,000</h4>
+                            <p class="channel-name">MrBeast</p>
+                            <p class="video-stats">46M views • 1 week ago</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="video-card">
+                    <img src="hqdefault.webp" alt="Video Thumbnail" class="video-thumbnail">
+                    <div class="video-info">
+                        <img src="channels4_profile (3).jpg" alt="Channel Avatar" class="avatar">
+                        <div class="video-details">
+                            <h4 class="video-title">IVOXYGEN - HANDS ON THE WHEELS</h4>
+                            <p class="channel-name">IVOXYGEN</p>
+                            <p class="video-stats">266K views • 3 weeks ago</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="video-card">
+                    <img src="hq720.webp" alt="Video Thumbnail" class="video-thumbnail">
+                    <div class="video-info">
+                        <img src="channels4_profile (4).jpg" alt="Channel Avatar" class="avatar">
+                        <div class="video-details">
+                            <h4 class="video-title">ФАНАТ ПАПИЧА ЗАКАЗАЛ РАЗБОР ИГРЫ у ДАХАКА! / КАК ИГРАТЬ 1х9? / Wraith King Dota 2</h4>
+                            <p class="channel-name">Daxak Dota</p>
+                            <p class="video-stats">266K views • 3 years ago</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+                <!-- Додаткові відео-картки -->
+            </section>
+        </main>
+    </div>
+    <div class="subscriptions">
+        <h2>Subscriptions</h2>
+        <ul class="subscription-list">
+            <li class="subscription-item">
+                <img src="channels4_profile (1).jpg" alt="Channel Logo" class="channel-logo">
+                <div class="channel-info">
+                    <span class="channel-name">Avice</span>
+                    <span class="channel-subscriber-count">100K Subscribers</span>
+                </div>
+            </li>
+            <li class="subscription-item">
+                <img src="channels4_profile (2).jpg" alt="Channel Logo" class="channel-logo">
+                <div class="channel-info">
+                    <span class="channel-name">MrBeast</span>
+                    <span class="channel-subscriber-count">320M Subscribers</span>
+                </div>
+            </li>
+            <li class="subscription-item">
+                <img src="channels4_profile (4).jpg" alt="Channel Logo" class="channel-logo">
+                <div class="channel-info">
+                    <span class="channel-name">Daxak Dota</span>
+                    <span class="channel-subscriber-count">250K Subscribers</span>
+                </div>
+            </li>
+            <li class="subscription-item">
+                <img src="channels4_profile (3).jpg" alt="Channel Logo" class="channel-logo">
+                <div class="channel-info">
+                    <span class="channel-name">IVOXYGEN</span>
+                    <span class="channel-subscriber-count">329K Subscribers</span>
+                </div>
+            </li>
+            <!-- Додайте інші канали за потреби -->
+        </ul>
+    </div>
+    
+</body>
+</html>
