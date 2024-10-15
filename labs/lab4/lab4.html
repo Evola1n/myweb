@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Plan</title>
+    <!-- Подключаем кастомный шрифт Londrina Sketch -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="weekly-plan">
+        <div class="header">
+            <h2>WEEKLY PLAN</h2>
+            <div class="header-right">
+                <label for="week-of">Week of</label>
+                <input type="text" id="week-of" placeholder="Enter week">
+                <label for="healthy-habit">Healthy Habit</label>
+                <input type="text" id="healthy-habit" placeholder="Enter habit">
+                <label for="rocked-it"><input type="checkbox" id="rocked-it"> Rocked it</label>
+                <label for="improvement"><input type="checkbox" id="improvement"> Room for Improvement</label>
+            </div>
+        </div>
+        
+        <!-- Sidebar with goals and checkboxes -->
+        <div class="sidebar">
+            <h3>Top 3 Goals</h3>
+            <div class="goal-item">
+                <input type="checkbox">
+                <div class="line" contenteditable="true" data-placeholder="Goal 1"></div>
+            </div>
+            <div class="goal-item">
+                <input type="checkbox">
+                <div class="line" contenteditable="true" data-placeholder="Goal 2"></div>
+            </div>
+            <div class="goal-item">
+                <input type="checkbox">
+                <div class="line" contenteditable="true" data-placeholder="Goal 3"></div>
+            </div>
+
+            <h3>Everything Else</h3>
+            <div class="goal-item">
+                <input type="checkbox">
+                <div class="line" contenteditable="true" data-placeholder="Task 1"></div>
+            </div>
+            <div class="goal-item">
+                <input type="checkbox">
+                <div class="line" contenteditable="true" data-placeholder="Task 2"></div>
+            </div>
+            <div class="goal-item">
+                <input type="checkbox">
+                <div class="line" contenteditable="true" data-placeholder="Task 3"></div>
+            </div>
+            <div class="goal-item">
+                <input type="checkbox">
+                <div class="line" contenteditable="true" data-placeholder="Task 4"></div>
+            </div>
+            <div class="goal-item">
+                <input type="checkbox">
+                <div class="line" contenteditable="true" data-placeholder="Task 5"></div>
+            </div>
+
+            <h3>Next Week</h3>
+            <div class="goal-item">
+                <input type="checkbox">
+                <div class="line" contenteditable="true" data-placeholder="Next week tasks"></div>
+            </div>
+        </div>
+
+        <!-- Weekly days content -->
+        <div class="content">
+            <div class="day">
+                <h3>MONDAY</h3>
+                <div class="line" contenteditable="true" data-placeholder="Monday tasks"></div>
+                <input type="checkbox">
+            </div>
+            <div class="day">
+                <h3>TUESDAY</h3>
+                <div class="line" contenteditable="true" data-placeholder="Tuesday tasks"></div>
+                <input type="checkbox">
+            </div>
+            <div class="day">
+                <h3>WEDNESDAY</h3>
+                <div class="line" contenteditable="true" data-placeholder="Wednesday tasks"></div>
+                <input type="checkbox">
+            </div>
+            <div class="day">
+                <h3>THURSDAY</h3>
+                <div class="line" contenteditable="true" data-placeholder="Thursday tasks"></div>
+                <input type="checkbox">
+            </div>
+            <div class="day">
+                <h3>FRIDAY</h3>
+                <div class="line" contenteditable="true" data-placeholder="Friday tasks"></div>
+                <input type="checkbox">
+            </div>
+            <div class="day">
+                <h3>SATURDAY</h3>
+                <div class="line" contenteditable="true" data-placeholder="Saturday tasks"></div>
+                <input type="checkbox">
+            </div>
+            <div class="day">
+                <h3>SUNDAY</h3>
+                <div class="line" contenteditable="true" data-placeholder="Sunday tasks"></div>
+                <input type="checkbox">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
