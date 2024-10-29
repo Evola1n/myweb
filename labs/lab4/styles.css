@@ -132,3 +132,29 @@ body {
     font-style: normal;
   }
   
+/* Weekend styling with horizontal split */
+.weekend {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.weekend .day {
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.weekend .day:last-child {
+    border-bottom: none; /* Убираем нижнюю границу у воскресенья */
+}
+
+.weekend .day h3 {
+    text-align: left;
+    font-family: 'Londrina Sketch', cursive;
+    margin: 0;
+}
+
