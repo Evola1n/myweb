@@ -148,7 +148,9 @@ body {
     box-sizing: border-box;
 }
 
-
+.weekend .day:last-child {
+    border-bottom: none; /* Убираем нижнюю границу у воскресенья */
+}
 
 .weekend .day h3 {
     text-align: left;
