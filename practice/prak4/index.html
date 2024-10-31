@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Полноразмерная Виртуальная Клавиатура</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <div class="keyboard">
+        <!-- Верхний ряд с функциональными клавишами -->
+        <div class="row function-row">
+            <div class="key func">Esc</div>
+            <div class="key func">F1</div>
+            <div class="key func">F2</div>
+            <div class="key func">F3</div>
+            <div class="key func">F4</div>
+            <div class="key func">F5</div>
+            <div class="key func">F6</div>
+            <div class="key func">F7</div>
+            <div class="key func">F8</div>
+            <div class="key func">F9</div>
+            <div class="key func">F10</div>
+            <div class="key func">F11</div>
+            <div class="key func">F12</div>
+            <div class="key func">Prt Sc</div>
+            <div class="key func">Insert</div>
+            <div class="key func">Delete</div>
+            <div class="key func">*</div>
+            <div class="key func">/</div>
+            <div class="key func">
+                <i class="fas fa-power-off"></i> <!-- Замените класс на нужный вам -->
+            </div>
+            
+
+        </div>
+
+        <!-- Основная часть клавиатуры и нумпад в одном уровне -->
+        <div class="main-section">
+            <div class="left-section">
+                <!-- Основная часть клавиатуры -->
+                <div class="row">
+                    <div class="key">~<br>₴</div>
+                    <div class="key">1<br>!</div>
+                    <div class="key">2<br>@</div>
+                    <div class="key">3<br>#</div>
+                    <div class="key">4<br>$</div>
+                    <div class="key">5<br>%</div>
+                    <div class="key">6<br>^</div>
+                    <div class="key">7<br>&</div>
+                    <div class="key">8<br>*</div>
+                    <div class="key">9<br>(</div>
+                    <div class="key">0<br>)</div>
+                    <div class="key">_<br>-</div>
+                    <div class="key">+<br>=</div>
+                    <div class="key backspace">Backspace</div>
+                </div>
+
+                <div class="row">
+                    <div class="key tab">Tab</div>
+                    <div class="key">Q</div>
+                    <div class="key">W</div>
+                    <div class="key">E</div>
+                    <div class="key">R</div>
+                    <div class="key">T</div>
+                    <div class="key">Y</div>
+                    <div class="key">U</div>
+                    <div class="key">I</div>
+                    <div class="key">O</div>
+                    <div class="key">P</div>
+                    <div class="key">[<br>}</div>
+                    <div class="key">] <br>{</div>
+                    <div class="key slash">\</div>
+                </div>
+
+                <div class="row">
+                    <div class="key caps">Caps Lock</div>
+                    <div class="key">A</div>
+                    <div class="key">S</div>
+                    <div class="key">D</div>
+                    <div class="key">F</div>
+                    <div class="key">G</div>
+                    <div class="key">H</div>
+                    <div class="key">J</div>
+                    <div class="key">K</div>
+                    <div class="key">L</div>
+                    <div class="key">;<br>:</div>
+                    <div class="key">"<br>'</div>
+                    <div class="key entermain">Enter</div>
+                </div>
+
+                <div class="row">
+                    <div class="key wide">Shift</div>
+                    <div class="key">Z</div>
+                    <div class="key">X</div>
+                    <div class="key">C</div>
+                    <div class="key">V</div>
+                    <div class="key">B</div>
+                    <div class="key">N</div>
+                    <div class="key">M</div>
+                    <div class="key">,<br>;</div>
+                    <div class="key">.<br>:</div>
+                    <div class="key">/<br>?</div>
+                    <div class="key wide">Shift</div>
+                </div>
+
+                <div class="row">
+                    <div class="key ctrl">Ctrl</div>
+                    <div class="key fn">Fn</div>
+                    <div class="key win">Win</div>
+                    <div class="key alt">Alt</div>
+                    <div class="key space">Space</div>
+                    <div class="key altgr">Alt Gr</div>
+                    <div class="key ctrl">Ctrl</div>
+                    
+                    <!-- Блок для стрелок -->
+                    <div class="arrow-keys">
+                        <div class="key keyup">↑</div>
+                        <div class="horizontal-arrows">
+                            <div class="key keyleft">←</div>
+                            <div class="key keydown">↓</div>
+                            <div class="key keyright">→</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Нумпад -->
+            <div class="numpad">
+                <div class="key">+</div>
+                <div class="key">-</div>
+                <div class="key">Num Lk</div>
+                <div class="key">7</div>
+                <div class="key">8</div>
+                <div class="key">9</div>
+                <div class="key">4</div>
+                <div class="key">5</div>
+                <div class="key">6</div>
+                <div class="key">1</div>
+                <div class="key">2</div>
+                <div class="key">3</div>
+                <div class="key">0</div>
+                <div class="key">.<br>Delete</div>
+                <div class="key">Enter</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #333;
+}
+body {
+    font-family: 'Roboto', sans-serif; /* Применяем кастомный шрифт */
+}
+
+/* Можно добавить это правило, чтобы убедиться, что шрифт применяется ко всем клавишам */
+.key {
+    font-family: 'Roboto', sans-serif; /* Применяем кастомный шрифт к клавишам */
+}
+
+
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.function-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
+
+}
+.key.func {
+    width: 48.3px;     /* Ширина клавиш */
+    height: 19px;    /* Высота клавиш */
+    font-size: 16px; /* Размер текста для функциональных клавиш */
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: #555; /* Цвет фона */
+    border-radius: 8px; /* Закругление углов */
+    color: #fff; /* Цвет текста */
+    cursor: pointer; /* Указатель при наведении */
+}
+
+.main-section {
+    display: flex;
+    gap: 20px;
+}
+
+.left-section, .numpad {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.row {
+    display: flex;
+    gap: 4px;
+}
+
+.key {
+    width: 50px; /* Ширина клавиш */
+    height: 50px; /* Высота клавиш */
+    background-color: #555; /* Цвет фона */
+    border-radius: 8px; /* Закругление углов */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px; /* Размер текста */
+    color: #fff; /* Цвет текста */
+    text-align: center;
+    cursor: pointer; /* Указатель при наведении */
+}
+
+.key:active {
+    background-color: #777;
+}
+
+.wide {
+    width: 141.5px;
+}
+
+.space {
+    width: 320px;
+}
+
+.numpad {
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    gap: 2px;
+    margin-left: -14px;
+}
+
+.numpad .key.zero {
+    width: 90px;
+}
+
+.numpad .key.enter {
+    grid-row: span 2;
+    height: 104px;
+}
+
+.numpad .key.wide {
+    grid-column: span 2;
+}
+
+.caps {
+    width: 120px;
+}
+
+.tab {
+    width: 100px;
+}
+.slash{
+
+    width: 76px;
+}
+
+.entermain {
+    width: 109px;
+}
+
+.backspace {
+    width: 125px;
+}
+
+.arrow-keys {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin-top: 8px;
+}
+
+.horizontal-arrows {
+    display: flex;
+    gap: 4px;
+}
+
+/* Размеры стрелочных клавиш */
+.arrow-keys .keyup, .arrow-keys .keydown, .arrow-keys .keyleft, .arrow-keys .keyright {
+    width: 55px;     /* Ширина клавиш */
+    height: 19px;    /* Высота клавиш */
+    font-size: 12px; /* Размер текста для стрелок */
+}
+
