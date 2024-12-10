@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Animation</title>
+    <!-- Подключаем файл стилей -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e2c;
+            overflow: hidden;
+        }
+
+        .animation-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://cs8.pikabu.ru/post_img/big/2018/03/26/10/1522085700117472599.jpg'); /* Кастомный фон */
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+
+        .characters {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .charizard, 
+        .snorlax {
+            width: 150px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .charizard img, 
+        .snorlax img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+
+<div class="animation-container">
+    <div class="background"></div>
+
+    <div class="characters">
+        <!-- Charizard -->
+        <div class="pokemon charizard">
+            <img id="charizard-sprite" src="https://img.pokemondb.net/sprites/red-blue/normal/charizard.png" alt="Charizard">
+        </div>
+
+        <!-- Snorlax -->
+        <div class="pokemon snorlax">
+            <img id="snorlax-sprite" src="https://img.pokemondb.net/sprites/silver/normal/snorlax.png" alt="Snorlax">
+        </div>
+    </div>
+</div>
+
+<!-- Подключаем файл скриптов -->
+<script>
+    // ==========================
+    // CHARIZARD ANIMATION
+    // ==========================
+    const charizardSprite = document.getElementById('charizard-sprite');
+
+    const charizardSprites = [
+        'https://img.pokemondb.net/sprites/red-blue/normal/charizard.png',
+        'https://img.pokemondb.net/sprites/silver/normal/charizard.png',
+        'https://img.pokemondb.net/sprites/ruby-sapphire/normal/charizard.png',
+        'https://img.pokemondb.net/sprites/diamond-pearl/normal/charizard.png',
+        'https://img.pokemondb.net/sprites/black-white/normal/charizard.png',
+        'https://img.pokemondb.net/sprites/x-y/normal/charizard.png'
+    ];
+
+    let charizardSpriteIndex = 0;
+
+    function changeCharizardSprite() {
+        charizardSpriteIndex = (charizardSpriteIndex + 1) % charizardSprites.length;
+        charizardSprite.src = charizardSprites[charizardSpriteIndex];
+    }
+
+    setInterval(changeCharizardSprite, 700); // Смена спрайта каждые 1 секунду
+
+
+    // ==========================
+    // SNORLAX ANIMATION
+    // ==========================
+    const snorlaxSprite = document.getElementById('snorlax-sprite');
+
+    const snorlaxSprites = [
+        'https://img.pokemondb.net/sprites/silver/normal/snorlax.png',
+        'https://img.pokemondb.net/sprites/diamond-pearl/normal/snorlax.png',
+        'https://img.pokemondb.net/sprites/black-white/normal/snorlax.png'
+    ];
+
+    let snorlaxSpriteIndex = 0;
+
+    function changeSnorlaxSprite() {
+        snorlaxSpriteIndex = (snorlaxSpriteIndex + 1) % snorlaxSprites.length;
+        snorlaxSprite.src = snorlaxSprites[snorlaxSpriteIndex];
+    }
+
+    setInterval(changeSnorlaxSprite, 900); // Смена спрайта каждые 1.5 секунды
+</script>
+
+</body>
+</html>
