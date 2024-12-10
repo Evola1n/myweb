@@ -1,0 +1,55 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e2c;
+            overflow: hidden;
+        }
+
+        .animation-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://cs8.pikabu.ru/post_img/big/2018/03/26/10/1522085700117472599.jpg'); /* Кастомный фон */
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+
+        .characters {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .charizard, 
+        .snorlax {
+            width: 150px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .charizard img, 
+        .snorlax img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
