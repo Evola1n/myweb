@@ -1,18 +1,16 @@
-
-
 <!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Особистий вебсайт Володимира Кірієнка</title>
+    <!-- Подключаем стиль -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Подключаем Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Особистий вебсайт Володимира Кірієнка</h1>
-    </header>
-
+    <!-- Навигация -->
     <nav>
         <ul>
             <li><a href="index.html">Головна</a></li>
@@ -22,11 +20,37 @@
         </ul>
     </nav>
 
-    <section id="home">
-        <h2>Ласкаво просимо на мій персональний вебсайт!</h2>
-        <p>Це місце, де ви можете знайти інформацію про мене, мої практичні та лабораторні роботи. Перейдіть за посиланнями вище, щоб дізнатися більше!</p>
+    <!-- Шапка сайта -->
+    <header>
+        <h1>Особистий вебсайт Володимира Кірієнка</h1>
+    </header>
+
+    <!-- Главный контент -->
+    <section id="home" class="reveal">
+        <h2>Ласкаво просимо!</h2>
+        <p>Це місце, де ви можете знайти інформацію про мене, мої практичні та лабораторні роботи.</p>
     </section>
 
+    <!-- Футер -->
+    <footer>
+        <p>&copy; 2023 Володимир Кірієнко</p>
+    </footer>
 
+    <!-- Скрипт для анимаций при скролле -->
+    <script>
+      window.addEventListener('scroll', function() {
+        let reveals = document.querySelectorAll('.reveal');
+
+        for(let i = 0; i < reveals.length; i++) {
+          let windowHeight = window.innerHeight;
+          let elementTop = reveals[i].getBoundingClientRect().top;
+          let elementVisible = 150;
+
+          if(elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add('active');
+          }
+        }
+      });
+    </script>
 </body>
-    </html>
+</html>

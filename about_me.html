@@ -22,17 +22,41 @@
         </ul>
     </nav>
 
-    <section id="about">
+
+    <section id="about" class="reveal">
         <h2>Про мене</h2>
-        <img src="photo_2024-07-26_19-28-11.jpg" alt="Фото студента" style="width:200px;">
-        <p>Привіт! Мене звати Володимир Кірієнко. Я студент з України, і мене захоплює веб-розробка та програмування. 
-            Мої контактні дані: <br>
-            Email: vovakir999@gmail.com <br>
-            Телефон: +380 96 559 67 68 <br>
-            Linkedin: <br>
-            GitHub: <a href="https://github.com/Evola1n">https://github.com/Evola1n</a>
-        </p>
-    </section>
-    </footer>
+        <div class="content">
+            <img src="photo_2025-01-31_23-30-02.jpg" alt="Фото Володимира Кірієнка">
+            <div class="text">
+                <p>Привіт! Мене звати Володимир Кірієнко. Я студент з України, і мене захоплює веб-розробка та програмування.</p>
+                <p><strong>Контактні дані:</strong></p>
+                <ul>
+                    <li>Email: <a href="mailto:vovakir999@gmail.com">vovakir999@gmail.com</a></li>
+                    <li>Телефон: +380 96 559 67 68</li>
+                    <li>GitHub: <a href="https://github.com/Evola1n">Evola1n</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <footer>
+            <p>&copy; 2023 Володимир Кірієнко</p>
+        </footer>
+        <script>
+            window.addEventListener('scroll', function() {
+              let reveals = document.querySelectorAll('.reveal');
+          
+              for (let i = 0; i < reveals.length; i++) {
+                let windowHeight = window.innerHeight;
+                let elementTop = reveals[i].getBoundingClientRect().top;
+                let elementVisible = 150;
+          
+                if (elementTop < windowHeight - elementVisible) {
+                  reveals[i].classList.add('active');
+                } else {
+                  reveals[i].classList.remove('active');
+                }
+              }
+            });
+          </script>
     </body>
     </html>
