@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Особистий вебсайт Володимира Кірієнка</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
     <header>
@@ -35,28 +37,22 @@
                     <li>Телефон: +380 96 559 67 68</li>
                     <li>GitHub: <a href="https://github.com/Evola1n">Evola1n</a></li>
                 </ul>
+                <div class="social-icons">
+                    <a href="https://github.com/Evola1n" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+
             </div>
         </div>
+    </section>
+    
+    
+    
     
         <footer>
             <p>&copy; 2023 Володимир Кірієнко</p>
         </footer>
-        <script>
-            window.addEventListener('scroll', function() {
-              let reveals = document.querySelectorAll('.reveal');
-          
-              for (let i = 0; i < reveals.length; i++) {
-                let windowHeight = window.innerHeight;
-                let elementTop = reveals[i].getBoundingClientRect().top;
-                let elementVisible = 150;
-          
-                if (elementTop < windowHeight - elementVisible) {
-                  reveals[i].classList.add('active');
-                } else {
-                  reveals[i].classList.remove('active');
-                }
-              }
-            });
-          </script>
+        <script src="script.js"></script>
     </body>
     </html>

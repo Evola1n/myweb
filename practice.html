@@ -19,7 +19,7 @@
             <li><a href="labs.html">Лабораторні завдання</a></li>
         </ul>
     </nav>
-    <section id="practice" class="reveal">
+    <section id="labs" class="reveal">
         <h2>Практичні роботи</h2>
         <div class="cards">
             <!-- Карточка 1 -->
@@ -30,16 +30,22 @@
                     <p>Створити Сайт Студента.</p>
                     <a href="index.html">Переглянути</a>
                 </div>
+            </div>
+            <div class="card">
                 <div class="card-content">
                     <h3>Практична робота 2</h3>
                     <p>Стиль для лаби 1</p>
                     <a href="labs/lab1/LAB1.html">Переглянути</a>
                 </div>
+            </div>
+            <div class="card">
                 <div class="card-content">
                     <h3>Практична робота 3</h3>
                     <p>Копія Youtube</p>
                     <a href="labs/lab3/lab3.html">Переглянути</a>
                 </div>
+            </div>
+            <div class="card">
                 <div class="card-content">
                     <h3>Практична робота 4</h3>
                     <p>Клавіатура</p>
@@ -49,22 +55,6 @@
             <!-- Добавь остальные карточки аналогично -->
         </div>
     </section>
-    <script>
-        window.addEventListener('scroll', function() {
-          let reveals = document.querySelectorAll('.reveal');
-      
-          for (let i = 0; i < reveals.length; i++) {
-            let windowHeight = window.innerHeight;
-            let elementTop = reveals[i].getBoundingClientRect().top;
-            let elementVisible = 150;
-      
-            if (elementTop < windowHeight - elementVisible) {
-              reveals[i].classList.add('active');
-            } else {
-              reveals[i].classList.remove('active');
-            }
-          }
-        });
-      </script>
+    <script src="script.js"></script>
 </body>
 </html>
