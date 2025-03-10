@@ -287,6 +287,9 @@ section h2::after {
 .card:nth-child(6) {
   animation-delay: 1.2s;
 }
+.card:nth-child(7) {
+  animation-delay: 1.25s;
+}
 
 /* ===== Новая цветовая гамма для карточек ===== */
 .card:nth-child(1) {
@@ -311,6 +314,10 @@ section h2::after {
 
 .card:nth-child(6) {
   background: linear-gradient(135deg, #4d4d4d 0%, #ff0040 100%); /* Темно-серый к красному */
+}
+
+.card:nth-child(7) {
+  background: linear-gradient(135deg, #0d0d0d 0%, #ff0040 100%); /* Черный к красному */
 }
 
 /* ===== Анимация при наведении на карточки ===== */
