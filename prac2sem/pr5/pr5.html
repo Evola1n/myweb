@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+ <html lang="uk">
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Практична робота 5: Асинхронне програмування та API</title>
+ </head>
+ <body>
+    <h1>Async та Fetch API - Питання та відповіді</h1>
+    
+    <div class="question">1. Які переваги має async/await над ланцюжками .then()?</div>
+    <div class="answer">`async/await` робить код більш читабельним, зменшує вкладеність і спрощує обробку помилок через `try/catch`.</div>
+    
+    <div class="question">2. Як Promise.all може покращити паралельну обробку запитів?</div>
+    <div class="answer">`Promise.all` дозволяє виконувати кілька асинхронних операцій одночасно та отримати всі результати разом, що підвищує продуктивність.</div>
+    
+    <div class="question">3. Які типові помилки можуть виникнути при використанні Fetch API?</div>
+    <div class="answer">Можливі помилки: невірний URL, проблеми з мережею, неправильний формат відповіді або відсутність перевірки `response.ok`.</div>
+    
+    <div class="question">4. Як перевіряти статус відповіді у Fetch API і чому це важливо?</div>
+    <div class="answer">Необхідно перевіряти `response.ok`, щоб переконатися, що запит виконаний успішно. В іншому випадку слід обробити помилку (`response.status`).</div>
+    
+    <div class="question">5. Які ризики пов'язані з необробленими помилками в асинхронному коді?</div>
+    <div class="answer">Необроблені помилки можуть спричинити некоректну роботу програми, зупинку виконання коду або відсутність реакції на збої API.</div>
+<h1>Практична робота №5: Асинхронне програмування та робота з API</h1>
+ <!-- Кнопка для завантаження даних (PokeAPI завдання) -->
+ <button id="loadPokemon">Load Pokémon Data</button>
+ <pre id="pokemonOutput"></pre>
+ <script src="script.js"></script>
+ </body>
+ </html>

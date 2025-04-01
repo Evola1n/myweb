@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Демонстрація ООП в JavaScript</title>
+</head>
+<body>
+    <h1>OOP в JavaScript - Питання та відповіді</h1>
+        
+        <div class="question">1. Які переваги має використання ES6 класів порівняно з функціями-конструкторами?</div>
+        <div class="answer">ES6 класи забезпечують більш зручний синтаксис, підтримують успадкування через `extends`, дозволяють визначати статичні методи та роблять код більш читабельним.</div>
+        
+        <div class="question">2. Як працює прототипне наслідування у JavaScript?</div>
+        <div class="answer">Усі об'єкти в JavaScript можуть наслідувати властивості та методи через прототип (`__proto__`). Це дозволяє створювати об'єкти на основі інших без дублювання коду.</div>
+        
+        <div class="question">3. Чим відрізняється контекст <code>this</code> в методах об’єктів від звичайних функцій?</div>
+        <div class="answer">В методах об'єктів `this` вказує на сам об'єкт, а у звичайних функціях значення `this` залежить від того, як викликається функція (наприклад, у `strict mode` або при передачі як callback).</div>
+        
+        <div class="question">4. Як <code>strict mode</code> впливає на використання конструкторів?</div>
+        <div class="answer">У `strict mode` виклик конструктора без `new` спричиняє помилку замість неявного створення глобального об'єкта.</div>
+        
+        <div class="question">5. Які переваги використання геттерів та сеттерів для інкапсуляції?</div>
+        <div class="answer">Геттери та сеттери дозволяють контролювати доступ до властивостей, реалізовувати перевірки та логіку під час читання/запису значень.</div>
+        
+        <div class="question">6. Як уникнути проблем із втратою контексту <code>this</code> при передачі методів?</div>
+        <div class="answer">Можна використовувати `bind()`, стрілкові функції або зберігати посилання на `this` у змінній (`const self = this`).</div>
+        
+        <div class="question">7. Які аспекти класичного OOP (інкапсуляція, поліморфізм, абстракція) підтримуються в JavaScript, а які – лише частково?</div>
+        <div class="answer">JavaScript підтримує всі три концепції, але інкапсуляція реалізована через `#privateFields` (ES6+) або через замикання.</div>
+
+    <script>
+        // Інкапсуляція: використання приватних змінних
+        class User {
+            #name;
+            #age;
+            constructor(name, age, profession) {
+                this.#name = name;
+                this.#age = age;
+                this.profession = profession;
+            }
+
+            getName() {
+                return this.#name;
+            }
+
+            getAge() {
+                return this.#age;
+            }
+
+            display() {
+                return `Користувач: ${this.getName()}, Вік: ${this.getAge()}, Професія: ${this.profession}`;
+            }
+        }
+
+        // Наслідування: Admin розширює User
+        class Admin extends User {
+            constructor(name, age, profession, role) {
+                super(name, age, profession);
+                this.role = role;
+            }
+
+            // Поліморфізм: перевизначений метод display
+            display() {
+                return `Адміністратор: ${this.getName()}, Вік: ${this.getAge()}, Професія: ${this.profession}, Роль: ${this.role}`;
+            }
+        }
+
+        function validateAge(age) {
+            return !isNaN(age) && age > 0;
+        }
+
+        function createUser() {
+            let name = prompt("Введіть ім'я:");
+            let age = parseInt(prompt("Введіть вік:"), 10);
+            while (!validateAge(age)) {
+                age = parseInt(prompt("Некоректний вік! Введіть вік ще раз:"), 10);
+            }
+            let profession = prompt("Введіть професію:");
+            let isAdmin = confirm("Цей користувач є адміністратором?");
+
+            if (isAdmin) {
+                let role = prompt("Введіть роль адміністратора:");
+                return new Admin(name, age, profession, role);
+            } else {
+                return new User(name, age, profession);
+            }
+        }
+
+        let user = createUser();
+        alert(user.display());
+        console.log(user.display());
+    </script>
+</body>
+</html>
